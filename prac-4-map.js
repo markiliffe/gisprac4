@@ -41,15 +41,7 @@ var basemap = new OpenLayers.Layer.XYZ("MapBox Streets Basemap",
  *
  */
 
-var osm = new OpenLayers.Layer.OSM("OpenStreetMap",
-    {
-        sphericalMercator: true, 
-        wrapDateLine: true,
-        numZoomLevels: 16,
-        isBaseLayer: true,
-    }
-
-    );
+var osm = new OpenLayers.Layer.OSM();
 
 
 /*
@@ -60,7 +52,7 @@ var osm = new OpenLayers.Layer.OSM("OpenStreetMap",
                     "Nottinghamshire Bus Stops", "http://localhost:8080/geoserver/giservices/wms",
                     {
                         LAYERS: 'giservices:BusStops',
-                       // STYLES: 'BusStops_style',
+                        STYLES: '',
                         tiled: true,
                         tilesOrigin : map.maxExtent.left + ',' + map.maxExtent.bottom
                     },
